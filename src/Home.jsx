@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './HomePage.css'; // Plik CSS pozostaje bez zmian
+import './HomePage.css'; // Plik CSS 
 
 const Home = () => {
 const [valueA, setValueA] = useState(''); // Pierwsza wartość
@@ -27,7 +27,7 @@ return (
 <main className="main">
 <section className="section">
 <h2>Kalkulator</h2>
-<p>Podaj dwie liczby, aby wykonać obliczenie:</p>
+<p>Podaj dwie wartości, aby wykonać obliczenie:</p>
 
 <label>
 Ciężar:
@@ -37,6 +37,7 @@ value={valueA}
 onChange={(e) => setValueA(e.target.value)}
 className="input"
 />
+kg
 </label>
 <br />
 <label>
@@ -54,13 +55,13 @@ Oblicz
 </button>
 
 {result !== null && (
-<h2>Wynik: {result}</h2>
+<h2>Wynik: {result}kg</h2>
 )}
 </section>
 </main>
 
 <footer className="footer">
-<p>&copy; {new Date().getFullYear()} Twoja Firma. Wszelkie prawa zastrzeżone.</p>
+<p> {new Date().getFullYear()} Przydatne kalkulatory.</p>
 </footer>
 </div>
 );
