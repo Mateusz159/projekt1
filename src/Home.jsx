@@ -37,14 +37,13 @@ return (
 <p>Podaj dwie wartości, aby wykonać obliczenie:</p>
 
 <label>
-Ciężar:
+Ciężar (kg):
 <input
 type="number"
 value={valueA}
 onChange={(e) => setValueA(e.target.value)}
 className="input"
 />
-kg
 </label>
 <br />
 <label>
