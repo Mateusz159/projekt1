@@ -25,9 +25,12 @@ setCalories(cpm.toFixed(2));
 };
 
 return (
-<div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-<h1>Kalkulator Kalorii</h1>
-
+<div className="container">
+<header className="header">
+<h1 className="title">CALORIE CALCULATOR</h1>
+</header>
+<br></br>
+<br></br>
 <div style={{ marginBottom: "10px" }}>
 <label>
 Waga (kg):
