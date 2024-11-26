@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import './HomePage.css'; // Plik CSS 
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
+import "./HomePage.css";
 
 const Home = () => {
-const [valueA, setValueA] = useState(''); // Pierwsza wartość
-const [valueB, setValueB] = useState(''); // Druga wartość
-const [result, setResult] = useState(null); // Wynik działania
+const [valueA, setValueA] = useState(""); 
+const [valueB, setValueB] = useState(""); 
+const [result, setResult] = useState(null); 
 
 const handleCalculate = () => {
-const a = parseFloat(valueA); // Konwersja pierwszej wartości na liczbę
-const b = Math.min(parseFloat(valueB), 20); // Druga wartość ograniczona do 20
+const a = parseFloat(valueA); 
+const b = Math.min(parseFloat(valueB), 20); 
 
 if (!isNaN(a) && !isNaN(b)) {
-const calculation = a * b * 0.0333 + a; // Obliczenie
-setResult(Math.round(calculation)); // Wynik zaokrąglony do najbliższej liczby całkowitej
+const calculation = a * b * 0.0333 + a; 
+setResult(Math.round(calculation)); 
 } else {
-alert('Proszę podać poprawne liczby!');
+alert("Proszę podać poprawne liczby!");
 }
 };
 
@@ -22,6 +23,12 @@ return (
 <div className="container">
 <header className="header">
 <h1 className="title">BENCH PRESS 1RP MAX CALCULATOR</h1>
+{}
+<nav>
+<Link to="/calorie-calculator" className="nav-link">
+
+</Link>
+</nav>
 </header>
 
 <main className="main">
@@ -54,9 +61,7 @@ className="input"
 Oblicz
 </button>
 
-{result !== null && (
-<h2>Wynik: {result}kg</h2>
-)}
+{result !== null && <h2>Wynik: {result}kg</h2>}
 </section>
 </main>
 
