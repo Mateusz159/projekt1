@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home"; 
 import CalorieCalculator from "./CalorieCalculator"; 
-import './App.css'; // Importujemy plik CSS
+import './App.css'; 
 
 function App() {
   return (

@@ -19,7 +19,7 @@ ppm = 66.5 + 13.75 * weight + 5.003 * height - 6.775 * age;
 ppm = 655.1 + 9.563 * weight + 1.85 * height - 4.676 * age;
 }
 
-
+// Obliczanie CPM
 const cpm = ppm * activity;
 setCalories(cpm.toFixed(2));
 };
@@ -96,15 +96,8 @@ style={{ marginLeft: "10px" }}
 </div>
 
 <button
+className="button"
 onClick={calculateCalories}
-style={{
-padding: "10px 20px",
-backgroundColor: "#007bff",
-color: "white",
-border: "none",
-borderRadius: "5px",
-cursor: "pointer",
-}}
 >
 Oblicz
 </button>
